@@ -1,0 +1,38 @@
+<html>
+  <title>Dom Introduction sfsdfsdfs</title>
+  <body>
+    <h3>the time</h3>
+    <button onclick="this.innerHTML=Date()">current date</button>
+
+    <p id="demo"></p>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">
+      click
+    </button>
+    <p id="demo2"></p>
+    <button onclick="mydate()">click here !</button>
+    <input type="color" id="bgcolor" />
+    <button id="btn">Color change</button>
+  </body>
+  <script>
+    body = document.body;
+    function mydate() {
+      document.getElementById("demo2").innerHTML = Date();
+    }
+
+    // document.getElementById("btn").onclick = function () {
+    //   alert();
+    // };
+
+    btn = document.getElementById("btn");
+    input = document.getElementById("bgcolor");
+
+    input.addEventListener("input", function () {
+      body.style.backgroundColor = input.value;
+    });
+
+    btn.addEventListener("click", function () {
+      input = document.getElementById("bgcolor");
+      body.style.backgroundColor = input.value;
+    });
+  </script>
+</html>
